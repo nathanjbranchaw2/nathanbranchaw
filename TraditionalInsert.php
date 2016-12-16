@@ -19,7 +19,7 @@
       $Steals = mysqli_real_escape_string($con,$_POST['Steals']);
       $Blocks = mysqli_real_escape_string($con,$_POST['Blocks']);
       
-      $query = "INSERT INTO `Traditional_Stats` (`pId`,`Opponent`,`Mins`,`Points`,`Turnovers`,`Rebounds`,`Def_Reb,`Off_Reb`,`FT_Made`,`FT_Att`,`3_Pt_Made`,`3_Pt_Att`,`Steals`,`Blocks`) VALUES ('".$pId."','".$Opponent."','".$Mins."','".$Points."','".$Turnovers."','".$Rebounds."','".$Def_Reb."','".$Off_Reb."','".$FT_Made."','".$FT_Att."','".$Three_Pt_Made."','".$Three_Pt_Att."','".$Steals."','".$Blocks."')";
+      $query = "INSERT INTO `Traditional_Stats` (`pId`,`Opponent`,`Mins`,`Points`,`Turnovers`,`Rebounds`,`Def_Reb`,`Off_Reb`,`FT_Made`,`FT_Att`,`3_Pt_Made`,`3_Pt_Att`,`Steals`,`Blocks`) VALUES ('".$pId."','".$Opponent."','".$Mins."','".$Points."','".$Turnovers."','".$Rebounds."','".$Def_Reb."','".$Off_Reb."','".$FT_Made."','".$FT_Att."','".$Three_Pt_Made."','".$Three_Pt_Att."','".$Steals."','".$Blocks."')";
 
       $result = mysqli_query($con,$query);
 
@@ -27,7 +27,7 @@
         echo 'Data Inserted Return Home by Clicking Home<br><br>';
         
       } else{
-        echo "Data Not Inserted Return With Home Button<br><br>";
+        die(mysqli_error($con));
         echo "<a href='TitlePage.html'>Home</a>";
       }
       

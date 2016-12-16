@@ -26,7 +26,7 @@
       if($result){
         echo 'Data Inserted Return Home by Clicking Home<br><br>'; 
       } else{
-        echo "Data Not Inserted Return With Home Button<br><br>";
+        die(mysqli_error($con));
         echo "<a href='TitlePage.html'>Home</a>";
       }
       
