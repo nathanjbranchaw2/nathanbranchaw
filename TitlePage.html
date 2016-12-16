@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Lewis University Men's Basketball Database Title Page-->
+
+<html lang = "en">
+
+  <head>
+  
+  <script type="text/javascript">
+    function goToNewPage()
+    {
+        var url = document.getElementById('list').value;
+        if(url != 'none') {
+            window.location = url;
+        }
+    }
+</script>
+    
+<title>Lewis Basketball Database </title>
+    <meta charset = "utf-8" />
+    <link rel="stylesheet" href="general.css">
+  
+</head>
+  <body>
+  <style>
+    	a{color:white;}
+    	body{background-color:red;}   
+    	h1{color:black;
+    		font-size:48px;}
+    </style>
+    <h1>Welcome to the Lewis Men's Basketball Database</h1>
+    <h2> Choose What You Would Like To Do </h2>
+    <select name="list" id="list" accesskey="target">
+    	<option value="http://front.cs.lewisu.edu/~nathanjbranchaw/general.php">View General Information</option>
+    	<option value="GeneralInsert.php">Add to General Info</option>
+    	<option value="Combine_Data.php">View Combine Stats</option>
+    	<option value="CombineInsert.php">Add to Combine Stats</option>
+    	<option value="Traditional_Stats.php">View Traditional Stats</option>
+    	<option value="TraditionalInsert.php">Add to Traditional Stats</option>
+    	<option value="Advanced_Stats.php">View Advanced Stats</option>
+    	<option value="AdvancedInsert.php">Add to Advanced Stats</option>
+    </select>
+        <input type="button"  value="Submit" onclick="goToNewPage()"/>
+    	
